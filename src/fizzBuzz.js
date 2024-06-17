@@ -24,44 +24,38 @@ If possible, try to identify a where a smaller helper function could be used, to
  * @Return {array} - output array
  */
 
+
+let outputArr = []
+
+
     function generateFizzBuzz(N){
-        for (let i = 1; i < N; i++){
-            if 
-        }
-    }
-
-    function isMultipleOf3(){
-        if (i % 3 === 0){
+        for (let i = 1; i <= N; i++){
+        if(i % 3 === 0 && i % 5 === 0){
+          outputArr.push("FizzBuzz")
+        }else if(i % 3 === 0){
             outputArr.push("Fizz")
+        }else if(i % 5 === 0){
+            outputArr.push("Buzz")
+        }else{
+            outputArr.push(i)
+          }
         }
-    }
-
-    function isMultipleOf5(){
-        if (i % 5 === 0){
-            outputArr.push("Fizz")
-        }
-    }
-
-    function isMultipleOf3And5(){
-        if (i % 3 and 5 === 0){
-            outputArr.push("Fizz")
-        }
+        return outputArr
     }
 
 
+    
+// console.log(generateFizzBuzz(10)), 
+// 'expectation: [1, 2, "Fizz", 4, "Buzz", "Fizz", 7, 8, "Fizz","Buzz"]';
 
+// console.log(generateFizzBuzz(20)), 
+// 'expectation: [1, 2, "Fizz", 4, "Buzz", "Fizz", 7, 8, "Fizz", "Buzz",11,"Fizz", 13, 14, "FizzBuzz", 16, 17, "Fizz", 19, "Buzz"]';
 
-console.log(generateFizzBuzz(10)), 
-'expectation: [1, 2, "Fizz", 4, "Buzz", "Fizz", 7, 8, "Fizz","Buzz"]';
+// console.log(generateFizzBuzz()), 
+// 'expectation:[]';
 
-console.log(generateFizzBuzz(20)), 
-'expectation: [1, 2, "Fizz", 4, "Buzz", "Fizz", 7, 8, "Fizz", "Buzz",11,"Fizz", 13, 14, "FizzBuzz", 16, 17, "Fizz", 19, "Buzz"]';
-
-console.log(generateFizzBuzz()), 
-'expectation:[]';
-
-console.log(generateFizzBuzz(0)), 
-'expectation: error';
+// console.log(generateFizzBuzz(0)), 
+// 'expectation: error';
 
 console.log(generateFizzBuzz(-4)), 
 'expectation: error';
