@@ -25,7 +25,7 @@ If possible, try to identify a where a smaller helper function could be used, to
  */
 
 
-let outputArr = []
+let outputsArr = []
 
 
     function generateFizzBuzz(N){
@@ -40,7 +40,7 @@ let outputArr = []
             outputArr.push(i)
           }
         }
-        return outputArr
+        return outputsArr
     }
 
 
