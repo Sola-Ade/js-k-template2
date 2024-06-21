@@ -12,7 +12,7 @@ and returns an array with exactly two elements, those being:
 let greaterThanOrEqualArr = []
 let lessThanArr = []
 
-function partitionNumbers(inputArr, N) {
+function partitionNumbers(inputArr?, N) {
     for (let i = 0; i < Array.length; i++) {
         if (i >= N) {
             greaterThanOrEqualArr.push(i)
